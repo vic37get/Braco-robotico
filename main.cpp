@@ -176,30 +176,29 @@ void display(void){
 		            glTranslatef (0.0, 1.0, 0.0);
 		            glColor3f(0.3,0.3,0.3);
 		            glutSolidSphere(0.3, 30, 30); // raio, fatias, pilhas
-		            glRotatef ((GLfloat) mao, 0.0, 0.0, 1.0);
+     	            glRotatef ((GLfloat) mao, 0.0, 0.0, 1.0);
 		            glTranslatef (0.0, 1.0, 0.0);
 		            
 					//mao-braco
 		            glPushMatrix();
+		            	glTranslatef (0.0, -0.5, 0.0);
 		            	glRotatef(90, 0, 0, 1);
-		            	glScalef (2.0, 0.4, 0.4);
+		            	glScalef (0.8, 0.3, 0.3);
 		            	glColor3f(1,0.647,0.0);
-		            	glutSolidCube (0.9); // Tamanho
+		            	glutSolidCube (1.0); // Tamanho
 					glPopMatrix();
 					
 					//Movimento dos dedos
 					glPushMatrix();
 						//Origem posicionada na mão
 						glPushMatrix();
-							glTranslatef(0.0, 1.0, 0.0);
 							glColor3f(0.3,0.3,0.3);
 							glutSolidCube(0.7);
-							glTranslatef(0.0, 1.0, 0.0);
 						 glPopMatrix();
 						 
 						 //Anelar
 						glPushMatrix();
-							glTranslatef(-0.2, 1.0, 0.2);
+							glTranslatef(-0.2, 0.0, 0.2);
 							glRotatef ((GLfloat) anelar, 0.0, 0.0, 1.0);
 							glTranslatef(0.0, 0.6, 0.0);
 		            		glRotatef(90, 0, 0, 1);
@@ -210,7 +209,7 @@ void display(void){
 						 
 						//Polegar
 						glPushMatrix();
-							glTranslatef(0.2, 1.0, 0.0);
+							glTranslatef(0.2, 0.0, 0.0);
 							glRotatef ((GLfloat) polegar, 0.0, 0.0, 1.0);
 							glTranslatef(0.0, 0.6, 0.0);
 		            		glRotatef(90, 0, 0, 1);
@@ -222,7 +221,7 @@ void display(void){
 						
 						//Indicador
 						glPushMatrix();
-							glTranslatef(-0.2, 1.0, -0.2);
+							glTranslatef(-0.2, 0.0, -0.2);
 							glRotatef ((GLfloat) indicador, 0.0, 0.0, 1.0);
 							glTranslatef(0.0, 0.6, 0.0);
 		            		glRotatef(90, 0, 0, 1);
