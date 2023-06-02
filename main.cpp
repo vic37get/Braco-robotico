@@ -5,6 +5,7 @@
  */
 
 // Bibliotecas utilizadas pelo OpenGL
+
 #ifdef __APPLE__
     #define GL_SILENCE_DEPRECATION
     #include <GLUT/glut.h>
@@ -239,4 +240,3 @@ void display(void){
     // Troca os buffers, mostrando o que acabou de ser desenhado
     glutSwapBuffers();
 }
-
